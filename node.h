@@ -5,9 +5,11 @@ template <typename T>
 struct Node {
     T data;
     Node<T>* next;
+    int count;
       
     Node(T data) : data(data) {
         next = nullptr;
+        count = 0;
     }
       
     void killSelf();
