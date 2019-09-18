@@ -6,7 +6,7 @@ using namespace std;
 
 int main(int argc, char const *argv[]) {
     //Tester::execute();
-    SelfList<int> list(SelfList<int>::Transpose);
+    SelfList<int> list(SelfList<int>::Move);
 
     list.insert(4);
     list.insert(14);
