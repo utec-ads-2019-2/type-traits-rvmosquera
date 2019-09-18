@@ -45,19 +45,32 @@ public:
     }
 
     bool remove(T data) {
-        // TODO
+        Node<T> **doublePointer= nullptr;
+
+        if ( find_1(data, doublePointer) ) {
+            *doublePointer = (*doublePointer)->next;
+            return true;
+        } else {
+            return false;
+        }
     }
 
     bool find(T data) {
         int size = this->size();
+        bool condition;
+
         if (size == 0) {
             return false;
         } else if (this->head->data == data) {
-            //count method increment
+            if( method == Method::Count)
+                this->head->count++;
+
             return true;
         } else if (size >= 2
         && this->head->next->data == data){
-            //count method increment
+            if( method == Method::Count)
+                this->head->count++;
+
             auto node_1 = this->head;
             auto node_2 = node_1->next;
             auto node_3 = node_2->next;
@@ -76,17 +89,17 @@ public:
                 break;
 
             case Method::Move : {
-                return moveMethod(data);
+                condition = moveMethod(data);
             }
                 break;
 
             case Method::Transpose : {
-                transpMethod(data, size);
+                condition = transpMethod(data, size);
             }
                 break;
         }
 
-        return true;
+        return condition;
     }
 
     T operator[](int index) {
