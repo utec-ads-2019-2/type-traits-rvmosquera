@@ -6,7 +6,7 @@ using namespace std;
 
 int main(int argc, char const *argv[]) {
     //Tester::execute();
-    SelfList<int> list(SelfList<int>::Move);
+    SelfList<int> list(SelfList<int>::Count);
 
     list.insert(4);
     list.insert(14);
@@ -24,12 +24,16 @@ int main(int argc, char const *argv[]) {
     list.remove(19);
     list.remove(17);
     list.remove(9);
+    list.print();*/
+    list.find(9);
+    list.find(9);
+    list.find(9);
+    list.find(9);
+    list.find(9);
+    list.find(100);
+    list.find(100);
     list.print();
-    list.find(9);
-    list.find(9);
-    list.find(9);
-    list.find(9);
-    list.find(9);*/
+    cout << list[1] << endl;
 
     return EXIT_SUCCESS;
 }

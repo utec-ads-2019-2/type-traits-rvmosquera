@@ -79,7 +79,16 @@ public:
     }
 
     void print() {
-        // TODO
+        cout << endl;
+        next(this->head);
+        cout << endl;
+    }
+
+    void next(Node<T> *node) {
+        if(node) {
+            cout << node->data << " ";
+            next(node->next);
+        }
     }
 
     ~TraitsList() {
