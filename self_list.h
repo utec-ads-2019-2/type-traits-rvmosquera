@@ -33,7 +33,7 @@ protected:
 public:
     SelfList(Method method) : head(nullptr), method(method) {};
 
-    bool insert(T data) {
+    void insert(T data) {
         Node<T> *newNode = new Node<T>(data);
 
         if (!this->head) {

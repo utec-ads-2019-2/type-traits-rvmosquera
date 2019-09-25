@@ -26,6 +26,8 @@ void Tester::execute() {
         ASSERT(floats.size() == newSize, "The size function has problems");
         ASSERT(isSorted(integers), "The integers list has problems");
         ASSERT(isSorted(floats), "The floats list has problems");
+
+        cout << "Test passed: " << j + 1 << endl;
     }
 }
 
